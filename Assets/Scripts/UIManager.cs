@@ -24,9 +24,9 @@ public class UIManager : MonoBehaviour
     {
 
     }
-    public void GoMainMenu()
+    public void GoMainMenu(string loadScene)
     {
-
+        SceneManager.LoadScene(loadScene);
     }
     public void QuitGame()
     {

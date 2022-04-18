@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu_Options.unity
+    guid: 4ae9582e71bf20c4793bf0372810e78c
+  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -29,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_8.unity
     guid: 4959dcad1d72ede49b5ef8faf8fa5837
+  - enabled: 1
+    path: Assets/Scenes/Level_Difficult_Sucesiones.unity
+    guid: 1e90da46df50d054d9347d408246b00c
+  - enabled: 1
+    path: Assets/Scenes/Level_Difficult_Figuras_Geometricas.unity
+    guid: d0f40fea1701f4545aec56f6bfba131e
+  - enabled: 1
+    path: Assets/Scenes/Level_Difficult_Sumas_y_Restas.unity
+    guid: 807a59eabbab6304db303ead08096069
   m_configObjects: {}

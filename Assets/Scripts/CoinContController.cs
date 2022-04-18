@@ -12,7 +12,7 @@ public class CoinContController : MonoBehaviour
     private void Awake()
     {
         if (coinContController == null) coinContController = this;
-        cont = 1;
+        cont = 0;
         enMarcha = true;
     }
     void Update()

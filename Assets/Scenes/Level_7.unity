@@ -187,9 +187,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 793119682013370519, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 793119682013370519, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 793119683044354748, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 793119683044354748, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934063768367054783, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934063768367054783, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.21
+      objectReference: {fileID: 0}
     - target: {fileID: 3048730999825309105, guid: cc149098a7b59214a960400356617829, type: 3}
       propertyPath: m_TagString
       value: Incorrect
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048730999960780028, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.19
       objectReference: {fileID: 0}
     - target: {fileID: 3048731000227729664, guid: cc149098a7b59214a960400356617829, type: 3}
       propertyPath: m_TagString
@@ -198,6 +226,14 @@ PrefabInstance:
     - target: {fileID: 3048731001411774026, guid: cc149098a7b59214a960400356617829, type: 3}
       propertyPath: m_TagString
       value: Correct
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048731001669687799, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048731001669687799, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.95
       objectReference: {fileID: 0}
     - target: {fileID: 3048731001801095354, guid: cc149098a7b59214a960400356617829, type: 3}
       propertyPath: m_TagString
@@ -238,6 +274,14 @@ PrefabInstance:
     - target: {fileID: 3595289560432127711, guid: cc149098a7b59214a960400356617829, type: 3}
       propertyPath: m_Text
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269263405258371987, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7269263405258371987, guid: cc149098a7b59214a960400356617829, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Menu_Options
       objectReference: {fileID: 0}
     - target: {fileID: 9052343904997312480, guid: cc149098a7b59214a960400356617829, type: 3}
       propertyPath: m_RootOrder
