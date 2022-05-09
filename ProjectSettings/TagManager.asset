@@ -9,8 +9,6 @@ TagManager:
   - Correct
   - Incorrect
   - TimeController
-  - MenuDifficult
-  - Background
   layers:
   - Default
   - TransparentFX

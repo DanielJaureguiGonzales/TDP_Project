@@ -190,7 +190,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.04
+  orthographic size: 9.06
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511220790108961039, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_Name
-      value: Level_4
+      value: Level_11
       objectReference: {fileID: 0}
     - target: {fileID: 1511220790108961267, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_RootOrder
@@ -401,6 +401,10 @@ PrefabInstance:
     - target: {fileID: 3705704676838963097, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_TagString
       value: Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705704677933434933, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.7395992
       objectReference: {fileID: 0}
     - target: {fileID: 3705704677933434933, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_LocalScale.y
@@ -688,7 +692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8913377239974466057, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000024319
+      value: -0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 8913377240304066930, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_Sprite

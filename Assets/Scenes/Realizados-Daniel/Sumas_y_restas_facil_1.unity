@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511220790108961039, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_Name
-      value: Level_4
+      value: Level_1
       objectReference: {fileID: 0}
     - target: {fileID: 1511220790108961267, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_RootOrder
@@ -560,7 +560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8913377239974466057, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000024319
+      value: -0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 8913377240304066930, guid: a14de537ddde285499b31c7cc1d9327c, type: 3}
       propertyPath: m_Sprite

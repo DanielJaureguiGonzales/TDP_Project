@@ -37,8 +37,9 @@ public class PlayerController : MonoBehaviour
     private const string STATE_IS_WALKING = "IsWalking";
     
     public LayerMask groundMask;
-    
-    
+
+    private bool isSucesion;
+    private bool isSumasRestas;
     [SerializeField] public bool comenzo;
     //private string comenzoPrefsName = "comenzó";
     void Awake()
@@ -217,6 +218,7 @@ public class PlayerController : MonoBehaviour
             return false;
         }
     }
+
     
     private void OnApplicationQuit()
     {
@@ -224,7 +226,12 @@ public class PlayerController : MonoBehaviour
         ContController.setContFailure(0);
         ContController.setContSuccess(0);
     }
-
+    #region colisiones 
+    
+    
+    
+    
+    #endregion
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Incorrect"))
@@ -239,8 +246,77 @@ public class PlayerController : MonoBehaviour
             contadorAciertos += 1;
             ContController.setContSuccess(contadorAciertos);
             print("contadorAciertos: " + ContController.getContSuccess());
-            
-            // FACIL NIVEL 1
+            // FACIL NIVEL 1 sucesiones
+            if (Application.loadedLevelName == "Sucesiones_Facil_1")
+            {
+                isSucesion = true;
+                SceneManager.LoadScene("Sucesiones_Facil_2", LoadSceneMode.Single);
+            } 
+            else if (Application.loadedLevelName == "Sucesiones_Facil_2") SceneManager.LoadScene("Sucesiones_Facil_3", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Facil_3") SceneManager.LoadScene("Sucesiones_Facil_4", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Facil_4") SceneManager.LoadScene("Sucesiones_Facil_5", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Facil_5") //MEDIO NIVEL 1
+            {
+                SceneManager.LoadScene("Sucesiones_Medio_1", LoadSceneMode.Single);
+                loadData();
+                TimeController.timeController.IsGameOver();
+                Puntaje.puntaje.IsGameOver();
+                CoinContController.coinContController.IsGameOver();
+                TimeController.timeController.IsOver();
+                Puntaje.puntaje.IsOver();
+                CoinContController.coinContController.IsOver();
+                contadorTotal = contadorAciertos + contadorFallido;
+                precision = (contadorAciertos / contadorTotal);
+                Debug.Log("Colision - Gano el juego");
+                Debug.Log("N° Total Incorrectas: "+ContController.getContFailure());
+                Debug.Log("N° de Precisión del nivel: "+decimal.Round((decimal)precision*100,2));
+                ContController.setContSuccess(0);
+                ContController.setContFailure(0);
+            }
+            else if (Application.loadedLevelName == "Sucesiones_Medio_1") SceneManager.LoadScene("Sucesiones_Medio_2", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Medio_2") SceneManager.LoadScene("Sucesiones_Medio_3", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Medio_3") SceneManager.LoadScene("Sucesiones_Medio_4", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Medio_4") SceneManager.LoadScene("Sucesiones_Medio_5", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Medio_5")  // DIFICIL NIVEL 1
+            {
+                SceneManager.LoadScene("Sucesiones_Dificil_1", LoadSceneMode.Single); 
+                loadData();
+                TimeController.timeController.IsGameOver();
+                Puntaje.puntaje.IsGameOver();
+                CoinContController.coinContController.IsGameOver();
+                TimeController.timeController.IsOver();
+                Puntaje.puntaje.IsOver();
+                CoinContController.coinContController.IsOver();
+                contadorTotal = contadorAciertos + contadorFallido;
+                precision = (contadorAciertos / contadorTotal);
+                Debug.Log("Colision - Gano el juego");
+                Debug.Log("N° Total Incorrectas: "+ContController.getContFailure());
+                Debug.Log("N° de Precisión del nivel: "+decimal.Round((decimal)precision*100,2));
+                ContController.setContFailure(0);
+                ContController.setContSuccess(0);
+            }
+            else if (Application.loadedLevelName == "Sucesiones_Dificil_1") SceneManager.LoadScene("Sucesiones_Dificil_2", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Dificil_2") SceneManager.LoadScene("Sucesiones_Dificil_3", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Dificil_3") SceneManager.LoadScene("Sucesiones_Dificil_4", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Dificil_4") SceneManager.LoadScene("Sucesiones_Dificil_5", LoadSceneMode.Single);
+            else if (Application.loadedLevelName == "Sucesiones_Dificil_5")
+            {
+                loadData();
+                TimeController.timeController.IsGameOver();
+                Puntaje.puntaje.IsGameOver();
+                CoinContController.coinContController.IsGameOver();
+                TimeController.timeController.IsOver();
+                Puntaje.puntaje.IsOver();
+                CoinContController.coinContController.IsOver();
+                contadorTotal = contadorAciertos + contadorFallido;
+                precision = (contadorAciertos / contadorTotal);
+                Debug.Log("Colision - Gano el juego");
+                Debug.Log("N° Total Incorrectas: "+ContController.getContFailure());
+                Debug.Log("N° de Precisión del nivel: "+decimal.Round((decimal)precision*100,2));
+                ContController.setContFailure(0);
+                ContController.setContSuccess(0);
+            }
+            // FACIL NIVEL 1 sumas y restas
             if (Application.loadedLevelName == "Sumas_y_restas_facil_1") SceneManager.LoadScene("Sumas_y_restas_facil_2", LoadSceneMode.Single); 
             else if (Application.loadedLevelName == "Sumas_y_restas_facil_2") SceneManager.LoadScene("Sumas_y_restas_facil_3", LoadSceneMode.Single);
             else if (Application.loadedLevelName == "Sumas_y_restas_facil_3") SceneManager.LoadScene("Sumas_y_restas_facil_4", LoadSceneMode.Single);
@@ -256,12 +332,13 @@ public class PlayerController : MonoBehaviour
             else if (Application.loadedLevelName == "Sumas_y_restas_medio_5")  // DIFICIL NIVEL 1
             {
                 SceneManager.LoadScene("Sumas_y_restas_dificil_1", LoadSceneMode.Single); 
+                
             }
             else if (Application.loadedLevelName == "Sumas_y_restas_dificil_1") SceneManager.LoadScene("Sumas_y_restas_dificil_2", LoadSceneMode.Single);
             else if (Application.loadedLevelName == "Sumas_y_restas_dificil_2") SceneManager.LoadScene("Sumas_y_restas_dificil_3", LoadSceneMode.Single);
             else if (Application.loadedLevelName == "Sumas_y_restas_dificil_3") SceneManager.LoadScene("Sumas_y_restas_dificil_4", LoadSceneMode.Single);
             else if (Application.loadedLevelName == "Sumas_y_restas_dificil_4") SceneManager.LoadScene("Sumas_y_restas_dificil_5", LoadSceneMode.Single);
-            else
+            else if(Application.loadedLevelName == "Sumas_y_restas_dificil_5")
             {
                 loadData();
                 TimeController.timeController.IsGameOver();
@@ -282,7 +359,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.CompareTag("Block"))
         {
             
-            transform.position += new Vector3(0, 0,0) * 0 * 0;
+            //transform.position += new Vector3(0, 0,0) * 0 * 0;
         }
     }
 
